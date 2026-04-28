@@ -36,7 +36,7 @@ export default function Navbar() {
           href="#"
           className="font-mono text-sm text-primary tracking-widest uppercase hover:text-accent transition-colors duration-200"
         >
-          ziyam.dev
+          Ziyam Muhamed
         </a>
 
           {/* Nav links and Theme toggle */}

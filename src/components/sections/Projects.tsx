@@ -9,7 +9,7 @@ const projects = [
     description:
       "End-to-end e-commerce platform for jerseys — product listings, cart, checkout, and order management built from scratch in JavaScript.",
     tags: ["JavaScript", "Node.js", "Express", "MongoDB"],
-    href: "https://github.com/ZiyamZain/Zekoya",
+    href: "https://zekoya.shop",
   },
   {
     title: "jobAssistAi",

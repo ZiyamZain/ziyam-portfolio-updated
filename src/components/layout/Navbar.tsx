@@ -41,12 +41,12 @@ export default function Navbar() {
 
           {/* Nav links and Theme toggle */}
           <div className="flex items-center gap-8">
-            <ul className="flex items-center gap-8 hidden sm:flex">
+            <ul className="flex items-center gap-4 sm:gap-8">
               {links.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="relative text-sm text-subtle hover:text-primary transition-colors duration-200 group"
+                    className="relative text-xs sm:text-sm text-subtle hover:text-primary transition-colors duration-200 group"
                   >
                     {link.label}
                     <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300" />

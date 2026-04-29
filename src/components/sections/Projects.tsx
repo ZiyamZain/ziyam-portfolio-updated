@@ -38,7 +38,6 @@ export default function Projects() {
   return (
     <section id="projects" className="section-pad px-6">
       <div className="max-w-7xl mx-auto">
-
         {/* Label */}
         <motion.p
           initial={{ opacity: 0 }}

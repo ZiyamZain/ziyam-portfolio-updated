@@ -1,37 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Cta() {
   return (
-    <section className="px-6 py-24 border-t border-border">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+    <section className="py-32 md:py-48 px-6 bg-bg border-t border-border/50 overflow-hidden relative">
+      {/* Subtle decorative gradient glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-5xl mx-auto text-center relative z-10 flex flex-col items-center">
+        
+        <motion.span
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative overflow-hidden rounded-[2.5rem] bg-primary text-bg px-8 py-24 text-center flex flex-col items-center shadow-2xl"
+          className="text-xs font-mono text-muted uppercase tracking-[0.2em] mb-8"
         >
-          {/* Subtle gradient glow in background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-transparent to-transparent opacity-50 pointer-events-none" />
-          
-          <h2 className="relative z-10 text-4xl md:text-5xl font-semibold tracking-tight mb-6 max-w-2xl">
-            Have an idea? <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-dim to-white">Let's build it together.</span>
-          </h2>
-          
-          <p className="relative z-10 text-bg/80 text-lg mb-10 max-w-xl mx-auto">
-            Whether you need a full-stack application, an e-commerce platform, or an intelligent AI integration—I'm ready to bring your vision to life.
-          </p>
-          
+          Available for projects
+        </motion.span>
+
+        <motion.h2 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-[clamp(2.5rem,7vw,6.5rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-primary mb-12"
+        >
+          Ready to build <br /> the extraordinary?
+        </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
           <a
             href="#contact"
-            className="relative z-10 inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-bg text-primary font-semibold hover:scale-[1.03] active:scale-95 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-bg/20"
+            className="group relative flex items-center gap-4 text-2xl md:text-3xl font-medium text-primary hover:text-accent transition-colors duration-300"
           >
-            Start a Conversation
+            <span>Let&apos;s get in touch</span>
+            <span className="relative flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full border border-border group-hover:bg-primary group-hover:text-bg group-hover:border-primary transition-all duration-300">
+              <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-45 transition-transform duration-300" />
+            </span>
           </a>
         </motion.div>
+
       </div>
     </section>
   );

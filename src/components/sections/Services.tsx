@@ -37,7 +37,7 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="text-xs font-mono text-muted tracking-widest uppercase mb-16 md:mb-24"
         >
-          02 / Expertise
+          01 / Expertise
         </motion.p>
 
         <div className="flex flex-col w-full border-t border-border">

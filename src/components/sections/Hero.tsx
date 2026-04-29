@@ -73,10 +73,17 @@ export default function Hero() {
             View Projects
           </a>
           <a
+            href="/resume.pdf"
+            download="Ziyam_Muhamed_Resume.pdf"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-surface border border-border text-primary text-sm font-medium hover:bg-black/5 dark:hover:bg-white/5 hover:border-subtle hover:scale-[1.02] active:scale-95 transition-all duration-300"
+          >
+            Download CV
+          </a>
+          <a
             href="https://github.com/ZiyamZain"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-subtle hover:text-primary transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-sm text-subtle hover:text-primary transition-colors duration-200 ml-4"
           >
             <GithubIcon size={15} />
             GitHub

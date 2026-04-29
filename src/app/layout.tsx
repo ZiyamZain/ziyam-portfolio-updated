@@ -14,14 +14,16 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ziyam-portfolio",
+  title: "Ziyam Muhamed | Full-Stack Developer & Freelancer",
   description:
-    "Full-Stack Developer specialising in React, Node.js and real-world AI-powered products. Based in India.",
+    "Ziyam Muhamed is a Full-Stack Web Developer specializing in React, Node.js, and custom E-Commerce solutions. Available for freelance work.",
+  keywords: ["Full-Stack Developer", "React Developer", "Node.js", "Freelance Web Developer", "Next.js", "E-Commerce Developer", "Software Engineer"],
   openGraph: {
-    title: "Ziyam Muhamed",
+    title: "Ziyam Muhamed | Full-Stack Developer",
     description:
-      "Full-Stack Developer specialising in React, Node.js and real-world AI-powered products.",
+      "Transforming ideas into high-performance web applications. Specializing in Next.js, React, and robust backend architectures.",
     type: "website",
+    url: "https://ziyam.online",
   },
 };
 

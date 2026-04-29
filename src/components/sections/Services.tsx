@@ -48,25 +48,33 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative border-b border-border py-12 md:py-16 flex flex-col md:flex-row items-start md:items-center justify-between overflow-hidden cursor-crosshair"
+              className="group relative border-b border-border py-8 md:py-16 flex flex-col md:flex-row items-start md:items-center justify-between overflow-hidden cursor-default md:cursor-crosshair"
             >
-              {/* Premium Hover Fill Background */}
-              <div className="absolute inset-0 bg-primary translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-out z-0" />
+              {/* Premium Hover Fill Background - Desktop Only */}
+              <div className="absolute inset-0 bg-primary translate-y-[101%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out z-0 hidden md:block" />
               
-              <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-16 md:w-[60%]">
-                <span className="text-sm font-mono text-muted group-hover:text-bg/40 transition-colors duration-500">
+              <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-4 md:gap-16 md:w-[60%] w-full">
+                <span className="text-sm font-mono text-muted md:group-hover:text-bg/40 transition-colors duration-500">
                   0{i + 1}
                 </span>
-                <h3 className="text-4xl md:text-6xl font-semibold tracking-[-0.02em] text-primary group-hover:text-bg transition-colors duration-500">
-                  {service.title}
-                </h3>
+                
+                <div className="flex items-center justify-between w-full md:w-auto">
+                  <h3 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-[-0.02em] text-primary md:group-hover:text-bg transition-colors duration-500">
+                    {service.title}
+                  </h3>
+                  {/* Icon visible next to title on mobile, hidden on desktop here */}
+                  <div className="md:hidden text-accent">
+                    {service.icon}
+                  </div>
+                </div>
               </div>
               
-              <div className="relative z-10 mt-8 md:mt-0 md:w-[35%] flex items-center justify-between gap-8">
-                <p className="text-subtle text-base md:text-lg leading-relaxed group-hover:text-bg/80 transition-colors duration-500">
+              <div className="relative z-10 mt-4 md:mt-0 md:w-[35%] flex items-center justify-between gap-8">
+                <p className="text-subtle text-base md:text-lg leading-relaxed md:group-hover:text-bg/80 transition-colors duration-500">
                   {service.description}
                 </p>
-                <div className="text-muted group-hover:text-accent transition-colors duration-500 transform group-hover:scale-110 group-hover:rotate-12">
+                {/* Icon visible on desktop, animated on hover */}
+                <div className="hidden md:block text-muted md:group-hover:text-accent transition-colors duration-500 transform md:group-hover:scale-110 md:group-hover:rotate-12">
                   {service.icon}
                 </div>
               </div>

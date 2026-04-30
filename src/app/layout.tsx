@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className="bg-bg text-primary font-sans antialiased" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
         >
           {children}
